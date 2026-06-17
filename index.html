@@ -8,6 +8,13 @@
 </head>
 <body>
 
+  <!-- ══ FIXED VIDEO BACKGROUND ══ -->
+  <div id="video-bg-fixed">
+    <video autoplay loop muted playsinline preload="auto" id="bg-video">
+      <source src="assets/video/hero.mp4" type="video/mp4" />
+    </video>
+  </div>
+
   <div id="progress"></div>
 
   <nav id="nav">
@@ -22,11 +29,6 @@
   <!-- ══ HERO ══ -->
   <section id="hero">
     <div class="hero-pin">
-      <div id="video-bg-fixed">
-        <video autoplay loop muted playsinline preload="auto" id="bg-video">
-          <source src="assets/video/hero.mp4" type="video/mp4" />
-        </video>
-      </div>
       <div class="hero-overlay"></div>
       <div class="hero-vignette" id="hero-vignette"></div>
 
@@ -52,15 +54,6 @@
       <!-- About -->
       <section id="about">
         <div class="about-inner">
-          <div class="about-img" id="about-img">
-            <!-- REPLACE: profile photo -->
-            <div class="profile-placeholder">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-              </svg>
-              <span>Profile photo</span>
-            </div>
-          </div>
           <div class="about-copy" id="about-copy">
             <p class="label">About Me</p>
             <h2 id="about-heading">Building real things<br/>that actually work.</h2>
@@ -137,22 +130,17 @@
               </div>
             </div>
 
-            <!-- 3 — 3D Websites -->
+            <!-- 3 — Taylor's Apples Website -->
             <div class="project-card">
               <div class="card-top">
                 <div class="card-meta"><span class="card-company">Kea Concepts</span><span class="card-year">2026</span></div>
-                <h3>AI-Powered 3D Animation Websites</h3>
-                <p class="card-summary">A repeatable pipeline for building and deploying immersive 3D animation websites for NZ businesses. Three.js + GLSL + GSAP + AI-assisted development — delivery time cut by ~60%.</p>
-                <div class="card-gallery"><div class="gallery-placeholder">Client site example</div><div class="gallery-placeholder">3D scene preview</div></div>
-                <div class="card-tags"><span>Three.js</span><span>WebGL</span><span>GLSL</span><span>GSAP</span><span>AI Dev</span><span>Claude API</span></div>
-                <button class="expand-btn" aria-expanded="false">Read More <span class="arrow">↓</span></button>
-              </div>
-              <div class="card-detail">
-                <div class="detail-section"><h4>What I Built</h4><p>A pipeline for rapidly building and deploying immersive 3D animation websites — combining AI-assisted development with Three.js, WebGL shaders, and GSAP scroll-driven animation. Concept to deployed 3D website in a fraction of the usual time.</p></div>
-                <div class="detail-section"><h4>Technical Stack</h4><div class="challenges"><div class="challenge"><h5>Three.js / WebGL</h5><p>Custom GLSL shaders, particle systems, PBR materials, bloom and depth-of-field.</p></div><div class="challenge"><h5>GSAP ScrollTrigger</h5><p>Scroll-pinned sequences, timeline scrubbing, parallax layers tied to scroll position.</p></div><div class="challenge"><h5>AI-Assisted Development</h5><p>Claude and GPT-4 for rapid prototyping, then hand-refined for production. Delivery time cut ~60%.</p></div></div></div>
-                <div class="detail-section"><h4>Technical Challenges</h4><div class="challenges"><div class="challenge"><h5>60fps on mobile</h5><p><strong>Problem:</strong> Dense 3D scenes drop to 15fps on mid-range mobile.</p><p><strong>Solution:</strong> GPU tier detection, three quality presets, LOD swapping, selective post-processing.</p></div><div class="challenge"><h5>Three.js + scroll sync</h5><p><strong>Problem:</strong> RAF vs scroll event jitter.</p><p><strong>Solution:</strong> GSAP's ticker as single source of truth — Three.js renderer inside GSAP's RAF loop.</p></div></div></div>
-                <div class="detail-section"><h4>Results</h4><div class="results"><div class="result"><span>60fps</span><p>Via adaptive quality</p></div><div class="result"><span>~60%</span><p>Faster delivery</p></div><div class="result"><span>NZ</span><p>Businesses served</p></div></div></div>
-                <div class="detail-section"><h4>Current Clients</h4><p>Full commercial engagements for established NZ businesses, in active development 2026.</p><div class="client-note"><span class="client-dot"></span><p>Enquire via <a href="https://keaconcepts.com" target="_blank" class="kea-link">Kea Concepts</a> — client names under NDA.</p></div></div>
+                <h3>Taylor's Apples — Immersive 3D Website</h3>
+                <p class="card-summary">A scroll-driven 3D animation website built for Taylor's Apples, a New Zealand apple grower. Features cinematic video transitions, parallax effects, and smooth GSAP scroll-triggered animations — all hand-crafted for a premium brand experience.</p>
+                <div class="card-tags"><span>Three.js</span><span>GSAP</span><span>ScrollTrigger</span><span>Video</span><span>Animation</span><span>Responsive</span></div>
+                <div class="site-preview">
+                  <iframe src="https://caydenlv2007.github.io/taylors-apples/" title="Taylor's Apples website preview" loading="lazy"></iframe>
+                  <a href="https://caydenlv2007.github.io/taylors-apples/" target="_blank" class="preview-link">Open full site ↗</a>
+                </div>
               </div>
             </div>
 
