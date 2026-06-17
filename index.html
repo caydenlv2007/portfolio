@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cayden Lin-Vaile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="progress"></div>
+
+  <nav id="nav">
+    <span class="logo">CLV</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero">
+    <div class="hero-pin">
+      <div id="video-bg-fixed">
+        <video autoplay loop muted playsinline preload="auto" id="bg-video">
+          <source src="assets/video/hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-vignette" id="hero-vignette"></div>
+
+      <div class="hero-text" id="hero-text">
+        <p class="hero-label">Mechatronics Engineer &amp; Founder</p>
+        <h1>Cayden<br/><span>Lin-Vaile</span></h1>
+        <p class="hero-sub" id="typewriter"><span class="tw-cursor">|</span></p>
+        <a href="#projects" class="btn hero-btn">View My Work</a>
+      </div>
+
+      <div class="scroll-hint" id="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTENT — rises over the hero ══ -->
+  <div id="content-layer">
+    <div class="content-reveal">
+      <div class="pull-tab"><span></span></div>
+
+      <!-- About -->
+      <section id="about">
+        <div class="about-inner">
+          <div class="about-img" id="about-img">
+            <!-- REPLACE: profile photo -->
+            <div class="profile-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+              </svg>
+              <span>Profile photo</span>
+            </div>
+          </div>
+          <div class="about-copy" id="about-copy">
+            <p class="label">About Me</p>
+            <h2 id="about-heading">Building real things<br/>that actually work.</h2>
+            <div class="about-paragraphs">
+              <p>I'm a <strong>Mechatronics Engineering student</strong> at the University of Canterbury and founder of <a href="https://keaconcepts.com" target="_blank" class="kea-link">Kea Concepts</a> — a New Zealand technology studio I built to deliver AI automation and immersive 3D web experiences to local businesses.</p>
+              <p>From an early age, I was founding businesses, coaching teams, and competing at a national level in sport — <strong>Saint Kentigern First XI</strong>, <strong>NZ Under-17 training squad</strong> — all while developing a deep obsession with AI, coding, and automation. I earned a national award for enterprise through the <strong>Young Enterprise Scheme</strong> and completed the <strong>IB Diploma</strong> at Saint Kentigern College.</p>
+              <p>Over the past year I've gone all-in on <strong>AI automation</strong> — building voice agents, RAG pipelines, and systems that run 24/7 without human input. The thread connecting everything I do is the same: find the problem, understand it deeply, and build something that actually fixes it.</p>
+            </div>
+            <div class="about-facts" id="about-facts">
+              <div class="fact"><span data-count="3">0</span><p>Projects</p></div>
+              <div class="fact"><span data-count="24">0</span><p>/7 AI Uptime</p></div>
+              <div class="fact"><span>NZ</span><p>Based</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ticker -->
+      <div class="ticker-wrap">
+        <div class="ticker-track" id="ticker">
+          <span>Voice AI</span><span>PLC</span><span>Three.js</span><span>WebGL</span><span>GSAP</span><span>Claude API</span><span>RAG</span><span>Ladder Logic</span><span>Twilio</span><span>ElevenLabs</span><span>State Machines</span><span>GLSL</span><span>Deepgram</span><span>IEC 61131-3</span><span>Booking APIs</span><span>Omron CP1H</span>
+          <span>Voice AI</span><span>PLC</span><span>Three.js</span><span>WebGL</span><span>GSAP</span><span>Claude API</span><span>RAG</span><span>Ladder Logic</span><span>Twilio</span><span>ElevenLabs</span><span>State Machines</span><span>GLSL</span><span>Deepgram</span><span>IEC 61131-3</span><span>Booking APIs</span><span>Omron CP1H</span>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <section id="projects">
+        <div class="projects-inner">
+          <div class="section-header" id="projects-header">
+            <p class="label">Selected Work</p>
+            <h2 class="split-heading" id="projects-heading">Projects</h2>
+          </div>
+
+          <div class="project-list">
+
+            <!-- 1 — Elevator -->
+            <div class="project-card">
+              <div class="card-top">
+                <div class="card-meta"><span class="card-company">ENMT211 — University of Canterbury</span><span class="card-year">2026</span></div>
+                <h3>Five-Floor Elevator Control System</h3>
+                <p class="card-summary">A PLC-controlled five-floor elevator programmed in Ladder Logic and Structured Text on an Omron CP1H. Auto-calibrates floor positions on startup, uses a PI controller for smooth motion, and implements a scan-direction scheduling algorithm — all deployed and tested on physical hardware.</p>
+                <div class="card-gallery">
+                  <img src="assets/images/elevator-hardware.jpeg" alt="Five-floor elevator hardware at University of Canterbury" loading="lazy"/>
+                  <img src="assets/images/elevator-state-machine.png" alt="Elevator finite state machine diagram" loading="lazy"/>
+                  <img src="assets/images/elevator-pi-control.png" alt="PI motion control system diagram" loading="lazy"/>
+                </div>
+                <div class="card-tags"><span>PLC</span><span>Ladder Logic</span><span>Structured Text</span><span>Omron CP1H</span><span>PI Control</span><span>State Machines</span></div>
+                <button class="expand-btn" aria-expanded="false">Read More <span class="arrow">↓</span></button>
+              </div>
+              <div class="card-detail">
+                <div class="detail-section"><h4>What I Built</h4><p>A complete five-floor elevator control system programmed in Ladder Logic and Structured Text on an Omron CP1H PLC. The system auto-calibrates floor positions from encoder readings on startup, moves the carriage smoothly using a custom PI controller, handles simultaneous requests from inside the car and each landing via a scan-direction scheduler, and controls doors with safety interlocks. Developed in CX-Programmer, tested in CX-Simulator, then deployed to physical hardware.</p></div>
+                <div class="detail-section"><h4>System States</h4><div class="states"><span class="state-chip blue">CALIBRATING #0</span><span class="state-chip">STOPPED #1</span><span class="state-chip">MOVE UP #2</span><span class="state-chip">MOVE DOWN #3</span><span class="state-chip">MOVING #4</span></div><p class="state-note">5-state finite state machine using a single integer variable (CurrentState) — unambiguous state at all times, with each ladder rung gated by the current state value.</p></div>
+                <div class="detail-section"><h4>Technical Challenges</h4><div class="challenges"><div class="challenge"><h5>Auto-calibration across hardware units</h5><p><strong>Problem:</strong> Encoder counts for each floor's limit switch varied between physical elevator units — hardcoded values would be inaccurate on any unit other than the one used during development.</p><p><strong>Solution:</strong> On startup, the carriage descends to the bottom limit switch, then ascends through all five floors. Encoder counts are captured at both the rising and falling edge of each limit switch, then averaged to produce the target floor position. Works on any unit without manual tuning.</p></div><div class="challenge"><h5>Smooth motion with PI control</h5><p><strong>Problem:</strong> The mechanical asymmetry of the winch caused the same gain values to behave differently going up versus down — overshoot in one direction, sluggish deceleration in the other.</p><p><strong>Solution:</strong> Implemented a PI controller (Kp = 5, Ki = 6000) with integral anti-windup reset when error reaches zero. Arrival detected when PID output settles within a deadband window around the hold value. Speed limits clamp the motor output to safe bounds in all conditions.</p></div><div class="challenge"><h5>Scan-direction scheduling</h5><p><strong>Problem:</strong> Multiple simultaneous requests from inside the car and landings needed to be serviced efficiently without skipping floors.</p><p><strong>Solution:</strong> Implemented a scan-direction algorithm in Structured Text using three Boolean request arrays (inside-car, up hall calls, down hall calls). Services all requests in the current direction before reversing — the same algorithm used in real commercial elevators.</p></div><div class="challenge"><h5>Door intermittent re-open bug</h5><p><strong>Problem:</strong> Slight deviations between elevator units caused the PLC to oscillate between Stopped and Moving states — the door would repeatedly open and close.</p><p><strong>Solution:</strong> Added a deadband to the PID controller's arrival detection, allowing doors to open at slightly different encoder values without causing jamming or a significant floor-level drop.</p></div></div></div>
+              </div>
+            </div>
+
+            <!-- 2 — AI Receptionist -->
+            <div class="project-card">
+              <div class="card-top">
+                <div class="card-meta"><span class="card-company">Kea Concepts</span><span class="card-year">2025 – Present</span></div>
+                <h3>AI Voice Receptionist</h3>
+                <p class="card-summary">A 24/7 AI receptionist that answers real phone calls, takes restaurant reservations, and books directly into Google Calendar — fully autonomous, no staff required. Built with Vapi, Claude API, ElevenLabs, and a custom Node.js/TypeScript backend deployed on Railway.</p>
+                <div class="card-gallery">
+                  <img src="assets/images/call-flow.png" alt="AI Receptionist call flow architecture" loading="lazy"/>
+                </div>
+                <div class="card-tags"><span>Voice AI</span><span>Claude API</span><span>Vapi</span><span>ElevenLabs</span><span>Deepgram</span><span>Google Calendar</span><span>Supabase</span><span>TypeScript</span><span>ClickSend SMS</span></div>
+                <button class="expand-btn" aria-expanded="false">Read More <span class="arrow">↓</span></button>
+              </div>
+              <div class="card-detail">
+                <div class="detail-section"><h4>What I Built</h4><p>A fully autonomous AI receptionist that answers phone calls for restaurants, understands natural speech, checks real-time availability against Google Calendar, books tables, and sends SMS confirmations — all without human involvement. Multi-tenant architecture means each business gets its own voice, system prompt, calendar, and config loaded dynamically from Supabase. Currently prototyped for a 60-seat Italian restaurant with plans to expand across hospitality, health, and trades.</p></div>
+                <div class="detail-section"><h4>How It Works</h4><div class="flow"><div class="flow-step"><span>📞</span><p>Customer calls</p></div><div class="flow-step"><span>🎙️</span><p>Vapi + Deepgram STT</p></div><div class="flow-step"><span>🧠</span><p>Claude processes + tool calls</p></div><div class="flow-step"><span>📅</span><p>Google Calendar booking</p></div><div class="flow-step"><span>🔊</span><p>ElevenLabs TTS reply</p></div><div class="flow-step"><span>📱</span><p>SMS confirmation</p></div></div></div>
+                <div class="detail-section"><h4>Technical Challenges</h4><div class="challenges"><div class="challenge"><h5>Streaming LLM output to reduce voice latency</h5><p><strong>Problem:</strong> Running STT → LLM → TTS sequentially added 2–4 seconds of dead air — unacceptable for a phone call.</p><p><strong>Solution:</strong> Implemented SSE (Server-Sent Events) streaming from the Claude API. LLM output is streamed token-by-token and flushed to Vapi's TTS on every sentence boundary (punctuation detection). Audio starts playing before the full response is generated.</p></div><div class="challenge"><h5>NZ speech recognition and slang handling</h5><p><strong>Problem:</strong> Deepgram's STT transcribed NZ slang, filler words, and casual speech poorly — "yeah nah" was interpreted as "yes", "sweet as" was ignored, phone numbers with "double" and "triple" were garbled.</p><p><strong>Solution:</strong> Built an extensive NZ-specific prompt layer that maps slang to intent: affirmations ("chur", "sweet as", "ka pai"), negations ("yeah nah"), time expressions ("half six" → 18:30), and phone number shorthand ("double three" → 33, "oh two seven" → 027). The system prompt handles ~100+ NZ speech patterns.</p></div><div class="challenge"><h5>Capacity-aware booking with overlap detection</h5><p><strong>Problem:</strong> A simple "is the slot taken?" check doesn't work for restaurants — a 60-seat restaurant can have many overlapping bookings, and each party has a different size and meal duration.</p><p><strong>Solution:</strong> Built a sliding-window capacity checker that queries all Google Calendar events for the day, calculates guest overlap within a 90-minute meal window, and returns remaining seats. If the requested slot is full, it automatically scans the next 14 days and suggests up to 3 alternative slots.</p></div><div class="challenge"><h5>Multi-tenant architecture from day one</h5><p><strong>Problem:</strong> Each restaurant has different hours, capacity, calendar, voice, and personality — hardcoding any of these would make scaling impossible.</p><p><strong>Solution:</strong> Every business is a row in Supabase. The system prompt, voice ID, calendar ID, opening hours, and special notes are all loaded dynamically per call based on the Vapi assistant ID. Onboarding a new restaurant = adding a database row and connecting their Google Calendar. Business records are cached with a 60-second TTL to avoid hitting Supabase on every call.</p></div><div class="challenge"><h5>Tool-calling agentic loop</h5><p><strong>Problem:</strong> The AI needs to do more than just talk — it needs to check availability, create bookings, find existing bookings, modify them, and cancel them, all mid-conversation.</p><p><strong>Solution:</strong> Implemented a full agentic tool-calling loop using the Anthropic API. Five tools (check_availability, create_booking, find_booking, modify_booking, cancel_booking) are defined with JSON schemas. When Claude returns a tool_use stop reason, the server executes the tool, feeds the result back, and lets Claude continue — looping until it produces a final text response.</p></div></div></div>
+                <div class="detail-section"><h4>Deployment</h4><p>Backend deployed on <strong>Railway</strong> with a Vapi webhook endpoint. Each call hits the Express server, which streams Claude's response back via SSE. All bookings, conversations, and customer records are logged to <strong>Supabase</strong>. An owner dashboard shows today's reservations, weekly analytics, and booking management.</p><div class="client-note"><span class="client-dot"></span><p>Live and taking calls. Onboarding via <a href="https://keaconcepts.com" target="_blank" class="kea-link">Kea Concepts</a>.</p></div></div>
+              </div>
+            </div>
+
+            <!-- 3 — 3D Websites -->
+            <div class="project-card">
+              <div class="card-top">
+                <div class="card-meta"><span class="card-company">Kea Concepts</span><span class="card-year">2026</span></div>
+                <h3>AI-Powered 3D Animation Websites</h3>
+                <p class="card-summary">A repeatable pipeline for building and deploying immersive 3D animation websites for NZ businesses. Three.js + GLSL + GSAP + AI-assisted development — delivery time cut by ~60%.</p>
+                <div class="card-gallery"><div class="gallery-placeholder">Client site example</div><div class="gallery-placeholder">3D scene preview</div></div>
+                <div class="card-tags"><span>Three.js</span><span>WebGL</span><span>GLSL</span><span>GSAP</span><span>AI Dev</span><span>Claude API</span></div>
+                <button class="expand-btn" aria-expanded="false">Read More <span class="arrow">↓</span></button>
+              </div>
+              <div class="card-detail">
+                <div class="detail-section"><h4>What I Built</h4><p>A pipeline for rapidly building and deploying immersive 3D animation websites — combining AI-assisted development with Three.js, WebGL shaders, and GSAP scroll-driven animation. Concept to deployed 3D website in a fraction of the usual time.</p></div>
+                <div class="detail-section"><h4>Technical Stack</h4><div class="challenges"><div class="challenge"><h5>Three.js / WebGL</h5><p>Custom GLSL shaders, particle systems, PBR materials, bloom and depth-of-field.</p></div><div class="challenge"><h5>GSAP ScrollTrigger</h5><p>Scroll-pinned sequences, timeline scrubbing, parallax layers tied to scroll position.</p></div><div class="challenge"><h5>AI-Assisted Development</h5><p>Claude and GPT-4 for rapid prototyping, then hand-refined for production. Delivery time cut ~60%.</p></div></div></div>
+                <div class="detail-section"><h4>Technical Challenges</h4><div class="challenges"><div class="challenge"><h5>60fps on mobile</h5><p><strong>Problem:</strong> Dense 3D scenes drop to 15fps on mid-range mobile.</p><p><strong>Solution:</strong> GPU tier detection, three quality presets, LOD swapping, selective post-processing.</p></div><div class="challenge"><h5>Three.js + scroll sync</h5><p><strong>Problem:</strong> RAF vs scroll event jitter.</p><p><strong>Solution:</strong> GSAP's ticker as single source of truth — Three.js renderer inside GSAP's RAF loop.</p></div></div></div>
+                <div class="detail-section"><h4>Results</h4><div class="results"><div class="result"><span>60fps</span><p>Via adaptive quality</p></div><div class="result"><span>~60%</span><p>Faster delivery</p></div><div class="result"><span>NZ</span><p>Businesses served</p></div></div></div>
+                <div class="detail-section"><h4>Current Clients</h4><p>Full commercial engagements for established NZ businesses, in active development 2026.</p><div class="client-note"><span class="client-dot"></span><p>Enquire via <a href="https://keaconcepts.com" target="_blank" class="kea-link">Kea Concepts</a> — client names under NDA.</p></div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <div id="contact-wrap">
+        <section id="contact">
+          <div class="contact-inner" id="contact-inner">
+            <p class="label">Get In Touch</p>
+            <h2>Let's work together.</h2>
+            <div class="draw-line" id="draw-line"></div>
+            <p class="contact-sub">Open to engineering internships, software roles, and freelance AI/web projects.</p>
+            <a href="mailto:cli199@uclive.ac.nz" class="btn contact-btn">cli199@uclive.ac.nz</a>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <p>&copy; 2026 Cayden Lin-Vaile &middot; Kea Concepts &middot; Christchurch, New Zealand</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

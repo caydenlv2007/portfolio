@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/caydenlin-vaile -maxdepth 2 -name \"portfolio*\" -type f 2>/dev/null | head -20)",
+      "Read(//Users/caydenlin-vaile/**)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --screenshot=\"/Users/caydenlin-vaile/portfolio/assets/images/ai-dashboard.png\" --window-size=1200,800 \"file:///Users/caydenlin-vaile/Desktop/Ai receptionist/dashboard/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --screenshot=\"/Users/caydenlin-vaile/portfolio/assets/images/call-flow.png\" --window-size=1100,400 \"file:///Users/caydenlin-vaile/portfolio/assets/images/call-flow.svg\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --screenshot=\"/Users/caydenlin-vaile/portfolio/assets/images/elevator-state-machine.png\" --window-size=900,500 \"file:///Users/caydenlin-vaile/portfolio/assets/images/elevator-state-machine.svg\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --screenshot=\"/Users/caydenlin-vaile/portfolio/assets/images/elevator-pi-control.png\" --window-size=900,400 \"file:///Users/caydenlin-vaile/portfolio/assets/images/elevator-pi-control.svg\")",
+      "Bash(find /tmp -maxdepth 1 -name \"*.png\" -o -name \"*.jpg\" -o -name \"*.jpeg\" -o -name \"*.heic\" 2>/dev/null | head -5; find /private/var/folders -maxdepth 5 -name \"*.jpeg\" -newer /Users/caydenlin-vaile/portfolio/assets/images/elevator-pi-control.png 2>/dev/null | head -5)",
+      "Read(//private/tmp/**)",
+      "Read(//private/var/folders/**)",
+      "Bash(cp \"/Users/caydenlin-vaile/Downloads/IMG_4671.jpeg\" \"/Users/caydenlin-vaile/portfolio/assets/images/elevator-hardware.jpeg\")",
+      "Bash(gh auth *)",
+      "Bash(git --version)",
+      "Bash(brew --version)",
+      "Bash(gh --version)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ],
+    "additionalDirectories": [
+      "/Users/caydenlin-vaile/Downloads"
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="400" rx="16" fill="url(#bg2)"/>
+
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="600" letter-spacing="1">PI MOTION CONTROL SYSTEM</text>
+  <line x1="310" y1="50" x2="590" y2="50" stroke="#333" stroke-width="1"/>
+
+  <!-- Target Floor -->
+  <rect x="30" y="130" width="130" height="80" rx="10" fill="#1a1a2e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="95" y="162" text-anchor="middle" fill="#4a9eff" font-size="13" font-weight="700">TARGET</text>
+  <text x="95" y="182" text-anchor="middle" fill="#888" font-size="10">Floor encoder value</text>
+
+  <!-- Sum junction -->
+  <circle cx="220" cy="170" r="22" fill="#1a1a2e" stroke="#d4a04a" stroke-width="1.5"/>
+  <text x="220" y="175" text-anchor="middle" fill="#d4a04a" font-size="18" font-weight="700">Σ</text>
+  <text x="210" y="155" fill="#3ecf8e" font-size="12">+</text>
+  <text x="210" y="193" fill="#cc5555" font-size="12">−</text>
+
+  <!-- Arrow Target → Sum -->
+  <line x1="160" y1="170" x2="198" y2="170" stroke="#4a9eff" stroke-width="2" filter="url(#glow2)"/>
+  <polygon points="195,165 205,170 195,175" fill="#4a9eff"/>
+
+  <!-- Error -->
+  <line x1="242" y1="170" x2="300" y2="170" stroke="#d4a04a" stroke-width="2" filter="url(#glow2)"/>
+  <polygon points="295,165 305,170 295,175" fill="#d4a04a"/>
+  <text x="270" y="160" text-anchor="middle" fill="#f0c060" font-size="11" font-weight="600">ERROR</text>
+
+  <!-- P block -->
+  <rect x="305" y="110" width="110" height="55" rx="8" fill="#1a1a2e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="360" y="135" text-anchor="middle" fill="#4a9eff" font-size="13" font-weight="700">P</text>
+  <text x="360" y="153" text-anchor="middle" fill="#888" font-size="10">Kp = 5</text>
+
+  <!-- I block -->
+  <rect x="305" y="180" width="110" height="55" rx="8" fill="#1a1a2e" stroke="#aa77ee" stroke-width="1.5"/>
+  <text x="360" y="205" text-anchor="middle" fill="#aa77ee" font-size="13" font-weight="700">I</text>
+  <text x="360" y="223" text-anchor="middle" fill="#888" font-size="10">Ki = 6000</text>
+
+  <!-- Branch to P and I -->
+  <line x1="305" y1="170" x2="305" y2="137" stroke="#d4a04a" stroke-width="1.5"/>
+  <line x1="305" y1="170" x2="305" y2="207" stroke="#d4a04a" stroke-width="1.5"/>
+
+  <!-- Sum junction 2 -->
+  <circle cx="470" cy="170" r="22" fill="#1a1a2e" stroke="#d4a04a" stroke-width="1.5"/>
+  <text x="470" y="175" text-anchor="middle" fill="#d4a04a" font-size="18" font-weight="700">Σ</text>
+
+  <!-- P → Sum2 -->
+  <line x1="415" y1="137" x2="450" y2="165" stroke="#4a9eff" stroke-width="2" filter="url(#glow2)"/>
+  <polygon points="445,160 453,168 443,167" fill="#4a9eff"/>
+
+  <!-- I → Sum2 -->
+  <line x1="415" y1="207" x2="450" y2="175" stroke="#aa77ee" stroke-width="2" filter="url(#glow2)"/>
+  <polygon points="445,180 453,172 443,173" fill="#aa77ee"/>
+
+  <!-- PID output -->
+  <line x1="492" y1="170" x2="540" y2="170" stroke="#d4a04a" stroke-width="2" filter="url(#glow2)"/>
+  <polygon points="535,165 545,170 535,175" fill="#d4a04a"/>
+  <text x="518" y="160" text-anchor="middle" fill="#f0c060" font-size="11" font-weight="600">PID</text>
+
+  <!-- Speed Limiter -->
+  <rect x="545" y="140" width="110" height="60" rx="8" fill="#1a1a2e" stroke="#cc5555" stroke-width="1.5"/>
+  <text x="600" y="165" text-anchor="middle" fill="#ff7777" font-size="12" font-weight="700">SPEED LIMIT</text>
+  <text x="600" y="183" text-anchor="middle" fill="#888" font-size="9">Clamp to safe bounds</text>
+
+  <!-- Arrow to Motor -->
+  <line x1="655" y1="170" x2="710" y2="170" stroke="#cc5555" stroke-width="2" filter="url(#glow2)"/>
+  <polygon points="705,165 715,170 705,175" fill="#cc5555"/>
+
+  <!-- Motor -->
+  <rect x="715" y="130" width="140" height="80" rx="10" fill="#1a1a2e" stroke="#3ecf8e" stroke-width="2"/>
+  <text x="785" y="162" text-anchor="middle" fill="#3ecf8e" font-size="13" font-weight="700">WINCH MOTOR</text>
+  <text x="785" y="182" text-anchor="middle" fill="#888" font-size="10">Hold = 3191</text>
+
+  <!-- Feedback: Encoder -->
+  <rect x="575" y="290" width="130" height="55" rx="8" fill="#1a1a2e" stroke="#2d8a8a" stroke-width="1.5"/>
+  <text x="640" y="315" text-anchor="middle" fill="#4adfd0" font-size="12" font-weight="700">ENCODER</text>
+  <text x="640" y="332" text-anchor="middle" fill="#888" font-size="10">PRV instruction</text>
+
+  <!-- Motor → Encoder -->
+  <line x1="785" y1="210" x2="785" y2="317" stroke="#2d8a8a" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="785" y1="317" x2="705" y2="317" stroke="#2d8a8a" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Encoder → Sum (feedback) -->
+  <line x1="575" y1="317" x2="220" y2="317" stroke="#2d8a8a" stroke-width="2" filter="url(#glow2)"/>
+  <line x1="220" y1="317" x2="220" y2="192" stroke="#2d8a8a" stroke-width="2" filter="url(#glow2)"/>
+  <polygon points="215,197 220,187 225,197" fill="#2d8a8a"/>
+  <text x="400" y="310" text-anchor="middle" fill="#4adfd0" font-size="10">_COUNTER (feedback)</text>
+
+  <!-- Equation -->
+  <text x="450" y="380" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="500">PID = (ERROR / Kp) − HOLD_VALUE + (I / Ki)</text>
+
+  <!-- Bottom label -->
+  <text x="450" y="395" text-anchor="middle" fill="#444" font-size="10" letter-spacing="0.5">Arrival detected when PID output settles within HOLD_VALUE ± 100</text>
+</svg>
